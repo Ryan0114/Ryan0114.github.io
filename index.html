@@ -1,35 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Wavy Banner Effects</title>
-    <link rel="stylesheet" href="wave_style.css" />
-  </head>
-  <body>
-    <!-- <div class="spinner-wrapper">
-      <div class="spinner"></div>
-    </div> -->
-    <section class="w">
-      <div class="wave wave1"></div>
-      <div class="wave wave2"></div>
-      <div class="wave wave3"></div>
-      <div class="wave wave4"></div>
-    </section>
-    <section class="b">
-      <!-- <a href="chess_project.zip" download="">download</a> -->
-      <div style="background-color: white">
-        <h1>Welcome to my website</h1>
-      </div>
-    </section>
-    <script>
-      $(document).ready(function () {
-        preloaderFadeOutTime = 500;
-        function hidePreloader() {
-          var preloader = $(".spinner-wrapper");
-          preloader.fadeOut(preloaderFadeOutTime);
-        }
-        hidePreloader();
-      });
-    </script>
-  </body>
+<html lang="zh-Hant-TW">
+    <head>
+        <meta charset="UTF-8">
+        <title>我的學習歷程網站</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Allura&family=Great+Vibes&display=swap" rel="stylesheet">
+        <style>
+            .name {
+                font-size: 40px;
+                font-family: 'Allura', cursive;
+                font-family: 'Great Vibes', cursive;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <!-- <h1><a href="#" style="text-decoration: none; color: white;">學習歷程網</a></h1> -->
+                <ul class="nav-links">
+                    <li><a href="#" style="font-size: 25px;"><strong>學習歷程網</strong></a></li>
+                    <li><a href="">介紹</a></li>
+                    <li><a href="">學習成果</a></li>
+                    <li><a href="">作品成果</a></li>
+                    <li><a href="">聯絡方式</a></li>
+                    <!-- <li><i><a href="https://google.com"><img src="images/day-and-night-white.png" style="width: 32px;"></a></li> -->
+                </ul>     
+                <a href="https://google.com"><img src="images/day-and-night-white.png" style="width: 32px;"></a>
+            </nav>
+        </header>
+
+        <main>
+            <img src="images/sun-1.png" id="sun">
+            <section>
+                <div class="wrapper">
+                    <img src="images/me.jpg" class="small-circle">
+                    <p class="name">Ryan Huang</p>
+                </div>
+            </section>
+
+            <article>
+                
+            </article>
+
+            <aside>
+
+            </aside>
+        </main>
+
+        <footer>
+
+        </footer>
+        <script type="text/javascript">
+            var bgPattern = document.getElementById("sun")
+            window.addEventListener("scroll", function(){
+                bgPattern.style.objectPosition = -window.pageYOffset+"px"
+            })
+        </script>
+    </body>
 </html>
