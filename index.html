@@ -22,84 +22,33 @@
                     <li><a href="special_performences.html">作品成果</a></li>
                     <li><a href="extand_learning.html">增廣自修</a></li>
                     <li><a href="collage_program.html">大學課程</a></li>
-                    <li><a href="mailto:pi88031221@gmail.com">聯絡方式</a></li>
-                </ul>     
-                <input type="checkbox" value="day-night" id="mode">
+                    <li><a href="mailto:pi88031221@gmail.com">email me</a></li>
+                    <li><a href="login.html">登入</a></li>
+                </ul>
             </nav>
         </header>
-
         <main>
-            <img src="images/sun-1.png" id="sun">
-            <section class="info-box">
-                <div class="wrapper">
-                    <img src="images/me.jpg" class="small-circle">
-                    <p class="name">Ryan Huang</p>
-                </div>
-            </section>
-
+            <div class="home-pic">
+                <img src="images/code.png" alt="code" id="code">
+                <div class="text-box"></div>
+                <h1 class="text-on-image">我的學習歷程</h1>
+                <hr>
+                <p class="name-on-image">輔仁高中 黃奕叡</p>
+            </div>
             <article>
-                <div class="big-box">
-                    <div class="category-box">
-                        <section class="latest">
-
-                        </section> 
+                <div class="container">
+                    <div class="cards">
+                        <div class="card">大家好</div>
+                        <div class="card">大家好</div>
+                        <div class="card">大家好</div>
+                        <div class="card">大家好</div>
+                        <div class="card">大家好</div>
+                        <div class="card">大家好</div>
+                        <div class="card">大家好</div>
+                        <div class="card">大家好</div>
                     </div>
-                         
-                    <div>
-                        <div class="category-box">
-                            <section class="category">
-        
-                            </section>
-                            <section class="category">
-            
-                            </section>
-                        </div>
-                        
-                        <div class="category-box">
-                            <section class="category">
-        
-                            </section>
-                            <section class="category">
-            
-                            </section>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="side">
-                    <aside>
-                        <h2 id="recommanded">推薦文章:</h2>
-                        <section class="category side-box">
-
-                        </section>
-                        <section class="category side-box">
-
-                        </section>
-                        <section class="category side-box">
-
-                        </section>
-                        <section class="category side-box">
-
-                        </section>
-                    </aside>
                 </div>
             </article>
-
-            <!-- <footer>
-                <p>Author: Ryan Huang</p>
-            </footer> -->
         </main>
-
-        <script type="text/javascript">
-            var bgPattern = document.getElementById("sun")
-            window.addEventListener("scroll", function () {
-                bgPattern.style.objectPosition = -window.pageYOffset + "px"
-            })
-
-            let toggle = document.getElementById("mode");
-            toggle.addEventListener('click', () => {
-                document.body.classList.toggle('dark');
-            })
-        </script>
     </body>
 </html>
