@@ -9,46 +9,49 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Allura&family=Great+Vibes&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
     </head>
     <body>
-      <header>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#" style="font-size: 25px;"><strong>學習歷程網</strong></a></li>
-                <li><a href="#" class="active">首頁</a></li>
-                <li><a href="about.html">介紹</a></li>
-                <li><a href="school_project.html">學習成果</a></li>
-                <li><a href="special_performences.html">作品成果</a></li>
-                <li><a href="extand_learning.html">增廣自修</a></li>
-                <li><a href="collage_program.html">大學課程</a></li>
-                <li><a href="mailto:pi88031221@gmail.com">email me</a></li>
-                <li><a href="login.html">登入</a></li>
-            </ul>
-        </nav>
-      </header>
-      <div class="home-pic">
-        <img src="images/code.png" alt="code" id="code">
-      </div>
-        <div class="container2">
-          <div class="row col-md-6 col-md-offset-3">
-            <div class="panel panel-primary">
-              <div class="panel-heading text-center">
-                <p class="form-title">Registration Form<p>
-              </div>
-              <div class="panel-body">
-                <form action="connect.php" method="post">
-                    <div class="form-group">
-                      <label for="account">Account</label>
-                      <input type="password" class="form-control" id="account" name="account"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password"/>
-                    </div>
-                    <input type="submit" class="btn btn-primary form-bottom"/>
-                </form>
-            </div>
+        <header>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" style="font-size: 25px;"><strong>學習歷程網</strong></a></li>
+                    <li><a href="index.html" class="active">首頁</a></li>
+                    <li><a href="about.html">介紹</a></li>
+                    <li><a href="school_project.html">學習成果</a></li>
+                    <li><a href="special_performences.html">作品成果</a></li>
+                    <li><a href="extand_learning.html">增廣自修</a></li>
+                    <li><a href="collage_program.html">大學課程</a></li>
+                    <li><a href="mailto:pi88031221@gmail.com">email me</a></li>
+                    <li><a href="login.html">登入</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="home-pic">
+            <img src="images/code.png" alt="code" id="code">
         </div>
+        <div class="container2">
+            <div class="panel-heading text-center">
+                <p class="form-title">登入<p>
+            </div>
+            <form id="login-form" action="index.html">
+                <label for="username">Username:</label><br>
+                <input type="text" id="username"><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password"><br><br>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+        <script>
+            const form = document.getElementById('login-form');
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                if (username == 'user' && password == 'user'){
+                    location.href = "index.html"
+                }
+            });
+        </script>
     </body>
 </html>
