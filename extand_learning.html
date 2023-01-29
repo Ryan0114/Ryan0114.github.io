@@ -6,9 +6,6 @@
         <meta name="keywords" content="學習歷程, 多元表現">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Allura&family=Great+Vibes&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -16,19 +13,47 @@
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html" style="font-size: 25px;"><strong>學習歷程網</strong></a></li>
-                    <li><a href="index.html" class="active">首頁</a></li>
+                    <li><a href="index.html">首頁</a></li>
                     <li><a href="about.html">介紹</a></li>
                     <li><a href="school_project.html">學習成果</a></li>
                     <li><a href="special_performences.html">作品成果</a></li>
-                    <li><a href="extand_learning.html">增廣自修</a></li>
+                    <li><a href="#" class="active">增廣自修</a></li>
                     <li><a href="collage_program.html">大學課程</a></li>
                     <li><a href="mailto:pi88031221@gmail.com">email me</a></li>
-                    <li><a href="login.html">登入</a></li>
+                    <li><a href="login.html" class="logout">登出</a></li>
                 </ul>
             </nav>
         </header>
 
         <main>
         </main>
+        <script>
+            class Auth {
+                constructor() {
+                    document.querySelector("body").style.display = "none";
+                    const auth = localStorage.getItem("auth");
+                    this.validateAuth(auth);
+                }
+
+                validateAuth(auth) {
+                    if (auth != 1) {
+                        location.assign("login.html");
+                    } else {
+                        document.querySelector("body").style.display = "block";
+                    }
+                }
+            }
+            const auth = new Auth();
+
+            var elements = document.getElementsByTagName("a"); 
+            for(var i=0; i<elements.length; i++){
+                if (elements[i].className == 'logout') { 
+                    elements[i].onclick = function(){ 
+                        localStorage.removeItem("auth");
+                        location.assign("login.html");
+                    }
+                } 
+            }
+        </script>
     </body>
 </html>

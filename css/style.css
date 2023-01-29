@@ -20,7 +20,8 @@ nav a {
     border-radius: 20px;
 }
 
-header ul li a:hover {
+header ul li a:hover,
+.active {
     background-color: #5c6773;
     /* background-color: #39444c; */
     /* background-color: #0d1c98; */
