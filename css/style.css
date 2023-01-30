@@ -1,33 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #1e1e1e;
+    overflow-x: hidden;
 }
 
 header {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     background-color: transparent;
+    align-items: center;
+    padding: 15px 100px;
+    z-index: 10;
 }
 
 .nav-links {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     text-decoration: none;
     list-style-type: none;
 }
 
-nav a {
+header a {
     text-decoration: none;
-    padding: 10px;
+    padding: 10px 20px 10px 20px;
     color: white;
     border-radius: 20px;
 }
 
-header ul li a:hover,
+button {
+    background-color: rgb(63, 61, 61);
+    color: white;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #be4f4f;
+    color: white;
+}
+
+header a:hover,
 .active {
     background-color: #5c6773;
     /* background-color: #39444c; */
     /* background-color: #0d1c98; */
-    width: 100px;
-    height: 80px;
+    /* width: 100px;
+    height: 80px; */
     color: white;
+}
+
+@media (max-width: 900px) {
+    header {
+        padding: 10px 20px;
+        flex-direction: column;
+    }
+}
+
+main {
+    position: absolute;
+    top: 50px;
+    left: 7vw;
 }
 
 .home-pic {
