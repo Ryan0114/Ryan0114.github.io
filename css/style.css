@@ -14,7 +14,7 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: transparent;
+    background-color: rgba(26, 25, 25, 0.8);
     align-items: center;
     padding: 15px 100px;
     z-index: 10;
@@ -63,23 +63,29 @@ header a:hover,
         padding: 10px 20px;
         flex-direction: column;
     }
+
+    /* main {
+        position: absolute;
+        top: 125px;
+    } */
 }
 
 main {
     position: absolute;
-    top: 50px;
+    top: 60px;
     left: 7vw;
 }
 
 .home-pic {
-    position: relative;
+    position: static;
     margin-top: 20px;
+    padding: 20px 0 20px 0;
+    align-items: center;
 }
 
 img {
+    position: relative;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     width: 87vw;
     align-items: center;
     filter: blur(3px);
@@ -87,7 +93,7 @@ img {
 
 .text-box {
     position: absolute;
-    top: 52%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 40vw;
@@ -99,7 +105,7 @@ img {
 
 .text-on-image {
     position: absolute;
-    top: 44%;
+    top: 33%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -108,7 +114,7 @@ img {
 
 hr {
     position: absolute;
-    top: 53%;
+    top: 36%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 30vw;
@@ -118,7 +124,7 @@ hr {
 
 .name-on-image {
     position: absolute;
-    top: 55.5%;
+    top: 38%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -126,6 +132,8 @@ hr {
 }
 
 article {
+    position: static;
+    /* top: 45vw; */
     margin-left: 6vw;
     margin-top: 100px;
 }
