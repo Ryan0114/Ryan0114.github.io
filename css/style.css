@@ -30,7 +30,7 @@ header {
 
 header a {
     text-decoration: none;
-    padding: 10px 20px 10px 20px;
+    padding: 8px 20px 8px 20px;
     color: white;
     border-radius: 20px;
 }
@@ -38,7 +38,7 @@ header a {
 button {
     background-color: rgb(63, 61, 61);
     color: white;
-    padding: 10px 20px 10px 20px;
+    padding: 8px 20px 8px 20px;
     border-radius: 20px;
     font-size: 16px;
 }
@@ -79,13 +79,13 @@ main {
 .home-pic {
     position: static;
     margin-top: 20px;
-    padding: 20px 0 20px 0;
+    /* padding: 20px 0 0 0; */
     align-items: center;
 }
 
 img {
     position: relative;
-    display: block;
+    /* display: block; */
     width: 87vw;
     align-items: center;
     filter: blur(3px);
@@ -96,7 +96,7 @@ img {
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 40vw;
+    width: 70vw;
     height: 10vw;
     background-color: black;
     border: 3px solid white;
@@ -134,7 +134,7 @@ hr {
 article {
     position: static;
     /* top: 45vw; */
-    margin-left: 6vw;
+    /* margin-left: 6vw; */
     margin-top: 100px;
 }
 
