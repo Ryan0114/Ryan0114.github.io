@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-:root {
-    --gap: 20px;
-}
-
 body {
     background-color: #1e1e1e;
     overflow-x: hidden;
@@ -76,27 +72,29 @@ main {
 }
 
 .home-pic {
+    width: 87vw;
+    height: 895px;
     position: static;
     margin-top: 20px;
-    /* padding: 20px 0 0 0; */
     align-items: center;
+    overflow: hidden;
 }
 
 .home-pic>img {
     position: relative;
-    /* display: block; */
-    width: 87vw;
+    bottom: 50px;
+    right: 110px;
     align-items: center;
     filter: blur(3px);
 }
 
 .text-box {
     position: absolute;
-    top: 35%;
+    top: 480px;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 70vw;
-    height: 10vw;
+    width: 73vw;
+    height: 200px;
     background-color: black;
     border: 3px solid white;
     opacity: 0.4;
@@ -104,33 +102,33 @@ main {
 
 .text-on-image {
     position: absolute;
-    top: 33%;
+    top: 430px;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 3.5vw;
+    font-size: 60px;
 }
 
 hr {
     position: absolute;
-    top: 36%;
+    top: 480px;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 30vw;
+    width: 35vw;
     size: 3px;
     color: white;
 }
 
 .name-on-image {
     position: absolute;
-    top: 38%;
+    top: 520px;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 1.7vw;
+    font-size: 30px;
 }
 
-@media (max-width: 1100px) {
+/* @media (max-width: 1100px) {
     .text-box {
         top: 27%;
     }
@@ -146,13 +144,13 @@ hr {
     .name-on-image {
         top: 29%;
     }
-}
+} */
 
 article {
     position: static;
     /* top: 45vw; */
     /* margin-left: 6vw; */
-    margin-top: 100px;
+    margin-top: 20px;
 }
 
 .container {
@@ -198,12 +196,12 @@ article {
 }
 
 .card {
+    position: relative;
     width: 270px;
     height: 270px;
     display: flex;
     flex-direction: column;
-    /* padding: 20px; */
-    background: #96d4d3;
+    background: #a59dc5;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
     scroll-snap-align: start;
@@ -211,13 +209,13 @@ article {
     overflow: hidden;
 }
 
-.card>img {
+.card img {
     width: 270px;
 }
 
-.card:hover {
-    color: white;
-    background: #a59dc5;
+.card img:hover {
+    position: relative;
+    top: 5px;
 }
 
 ::-webkit-scrollbar {
@@ -289,4 +287,8 @@ div>label {
     padding: 5px 8px;
     border: 1px solid #ef9a9a;
     display: none
+}
+
+.word {
+    height: 3000px;
 }
