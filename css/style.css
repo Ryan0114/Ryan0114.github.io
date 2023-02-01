@@ -154,17 +154,12 @@ header a {
 .nav-links a:hover,
 .active {
     background-color: #5c6773;
-    /* background-color: #39444c; */
-    /* background-color: #0d1c98; */
-    /* width: 100px;
-    height: 80px; */
     color: white;
 }
 
 @media (max-width: 900px) {
     header {
         padding: 10px 20px;
-        /* flex-direction: column; */
     }
 }
 
