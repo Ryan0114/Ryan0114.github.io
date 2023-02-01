@@ -28,6 +28,16 @@ header {
     list-style-type: none;
 }
 
+@media (max-width: 1220px) {
+    .nav-links {
+        display: none;
+    }
+
+    .logout {
+        display: none;
+    }
+}
+
 header a {
     text-decoration: none;
     padding: 8px 20px 8px 20px;
@@ -35,7 +45,7 @@ header a {
     border-radius: 20px;
 }
 
-button {
+.logout {
     background-color: rgb(63, 61, 61);
     color: white;
     padding: 8px 20px 8px 20px;
@@ -43,12 +53,101 @@ button {
     font-size: 16px;
 }
 
-button:hover {
+.logout:hover {
     background-color: #be4f4f;
     color: white;
+    cursor: pointer;
 }
 
-header a:hover,
+.storage-box {
+    display: none;
+    background-color: #1a1919;
+    border: black;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+}
+
+.storage-box:hover {
+    background-color: rgb(63, 61, 61);
+}
+
+@media (max-width: 1220px) {
+    .storage-box {
+        display: block;
+    }
+}
+
+.storage-box img {
+    width: 30px;
+    filter: invert(1);
+}
+
+.hidden-box {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hidden-links {
+    padding: 20px 0 20px 20px;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.hidden-links>a {
+    margin: 10px;
+    font-weight: 10px;
+}
+
+.hidden-logout {
+    background-color: rgb(63, 61, 61);
+    color: white;
+    padding: 8px 20px 8px 20px;
+    margin-left: 30px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.hidden-logout:hover {
+    background-color: #be4f4f;
+    color: white;
+    cursor: pointer;
+}
+
+.h-left {
+    float: left;
+}
+
+@media (min-width:1220px) {
+
+    .unhidden,
+    .hidden-links,
+    .hidden-logout {
+        display: none;
+    }
+
+    .hidden-box {
+        width: 0;
+    }
+}
+
+.unhidden {
+    background-color: transparent;
+    border: transparent;
+    position: absolute;
+    top: 25px;
+    right: 40px;
+}
+
+.unhidden>img {
+    width: 30px;
+}
+
+.nav-links a:hover,
 .active {
     background-color: #5c6773;
     /* background-color: #39444c; */
@@ -61,7 +160,7 @@ header a:hover,
 @media (max-width: 900px) {
     header {
         padding: 10px 20px;
-        flex-direction: column;
+        /* flex-direction: column; */
     }
 }
 
