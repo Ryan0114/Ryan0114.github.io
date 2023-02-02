@@ -21,6 +21,23 @@
                 <li><a href="mailto:pi88031221@gmail.com">email me</a></li>
             </ul>
             <button class="logout">登&#8288;出</button>
+            <button class="storage-box"><img src="images/hamburger.png" alt="storage"></button>
+            <div class="hidden-box">
+                <div class="h-left">
+                    <ul class="hidden-links">
+                        <li><a href="#">首頁</a></li>
+                        <li><a href="about.html">介紹</a></li>
+                        <li><a href="school_project.html">學習成果</a></li>
+                        <li><a href="special_performences.html">作品成果</a></li>
+                        <li><a href="certificate_display.html">獎狀展示</a></li>
+                        <li><a href="extand_learning.html">增廣自修</a></li>
+                        <li><a href="collage_program.html">大學課程</a></li>
+                        <li><a href="mailto:pi88031221@gmail.com">email me</a></li>
+                    </ul>
+                    <button class="hidden-logout">登&#8288;出</button>
+                </div>
+                <button class="unhidden"><img src="images/x.png" alt="x"></button>
+            </div>
         </header>
         <main>
             
@@ -44,6 +61,7 @@
             const auth = new Auth();
 
             var elements = document.getElementsByTagName("button"); 
+            var hidden = true;
             for(var i=0; i<elements.length; i++){
                 if (elements[i].className == 'logout') { 
                     elements[i].onclick = function(){ 
@@ -51,6 +69,22 @@
                         location.assign("login.html");
                     }
                 } 
+
+                const hidden_box = document.querySelector(".hidden-box")
+
+                if (elements[i].className == 'storage-box' & hidden==true) {
+                    elements[i].onclick = function(){
+                        hidden = false;
+                        hidden_box.style.display = "block";
+                    }
+                }
+
+                if (elements[i].className == 'unhidden' & hidden==true) {
+                    elements[i].onclick = function(){
+                        hidden = false;
+                        hidden_box.style.display = "none";
+                    }
+                }
             }
         </script>
     </body>
