@@ -36,6 +36,10 @@ header {
     .logout {
         display: none;
     }
+
+    .nothing {
+        display: none;
+    }
 }
 
 header a {
@@ -208,7 +212,7 @@ main {
 .text-on-image {
     position: absolute;
     top: 430px;
-    left: 50%;
+    left: 43vw;
     transform: translate(-50%, -50%);
     color: white;
     font-size: 60px;
@@ -217,7 +221,7 @@ main {
 hr {
     position: absolute;
     top: 480px;
-    left: 50%;
+    left: 43vw;
     transform: translate(-50%, -50%);
     width: 35vw;
     size: 3px;
@@ -227,7 +231,7 @@ hr {
 .name-on-image {
     position: absolute;
     top: 520px;
-    left: 50%;
+    left: 43vw;
     transform: translate(-50%, -50%);
     color: white;
     font-size: 30px;
@@ -318,9 +322,19 @@ article {
     width: 270px;
 }
 
-.card img:hover {
+.card a:hover {
     position: relative;
     top: 5px;
+}
+
+.wic {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 ::-webkit-scrollbar {
@@ -396,4 +410,14 @@ div>label {
 
 .word {
     height: 3000px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: -7vw;
+    right: 0;
+    width: 100vw;
+    height: 100px;
+    background-color: #0e0e0e;
 }

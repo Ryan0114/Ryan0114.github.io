@@ -45,16 +45,16 @@
                 <div class="text-box"></div>
                 <h1 class="text-on-image">我&#8288;的&#8288;學&#8288;習&#8288;歷&#8288;程</h1>
                 <hr>
-                <p class="name-on-image">輔仁高中 黃奕叡</p>
+                <p class="name-on-image">輔&#8288;仁&#8288;高&#8288;中 黃&#8288;奕&#8288;叡</p>
             </div>
             <article>
                 <div class="container">
                     <div class="cards">
                         <div class="card">
-                            <a href="about.html"><img src="images/test.jpeg" alt="sosad"></a>
-                            <div>
-                                
-                            </div>
+                            <a href="about.html">
+                                <img src="images/test.jpeg" alt="sosad">
+                                <div class="wic">介紹</div>
+                            </a>
                         </div>
                         <div class="card">
                             <a href="school_project.html"><img src="images/test.jpeg" alt="sosad"></a>
@@ -77,6 +77,7 @@
 
                 </div>
             </article>
+            <footer></footer>
         </main>
         <script>
             class Auth {
@@ -94,12 +95,12 @@
                     }
                 }
             }
-            const auth = new Auth();
+            const auth = new Auth()
 
             var elements = document.getElementsByTagName("button"); 
             var hidden = true;
             for(var i=0; i<elements.length; i++){
-                if (elements[i].className == 'logout') { 
+                if (elements[i].className == 'logout' || elements[i].className == 'hidden-logout') { 
                     elements[i].onclick = function(){ 
                         localStorage.removeItem("auth");
                         location.assign("login.html");
