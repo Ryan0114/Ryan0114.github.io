@@ -28,7 +28,7 @@ header {
     list-style-type: none;
 }
 
-@media (max-width: 1220px) {
+@media (max-width: 1237px) {
     .nav-links {
         display: none;
     }
@@ -75,7 +75,7 @@ header a {
     background-color: rgb(63, 61, 61);
 }
 
-@media (max-width: 1220px) {
+@media (max-width: 1237px) {
     .storage-box {
         display: block;
     }
@@ -175,7 +175,7 @@ main {
 
 .home-pic {
     width: 87vw;
-    height: 895px;
+    height: 695px;
     position: static;
     margin-top: 20px;
     align-items: center;
@@ -192,7 +192,7 @@ main {
 
 .text-box {
     position: absolute;
-    top: 480px;
+    top: 380px;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 73vw;
@@ -211,7 +211,7 @@ main {
 
 .text-on-image {
     position: absolute;
-    top: 430px;
+    top: 330px;
     left: 43vw;
     transform: translate(-50%, -50%);
     color: white;
@@ -220,7 +220,7 @@ main {
 
 hr {
     position: absolute;
-    top: 480px;
+    top: 380px;
     left: 43vw;
     transform: translate(-50%, -50%);
     width: 35vw;
@@ -230,7 +230,7 @@ hr {
 
 .name-on-image {
     position: absolute;
-    top: 520px;
+    top: 420px;
     left: 43vw;
     transform: translate(-50%, -50%);
     color: white;
@@ -268,11 +268,48 @@ hr {
     }
 }
 
+.self-intro-mp {
+    position: -webkit-sticky;
+    /* Safari & IE */
+    position: sticky;
+    top: 100px;
+    float: left;
+    margin: 50px 30px 0 0;
+    background-color: rgb(17, 17, 17);
+    width: 300px;
+    height: 600px;
+    border-radius: 30px;
+}
+
+@media (max-width:1450px) {
+    .self-intro-mp {
+        float: initial;
+        width: 88vw;
+        height: 200px;
+    }
+
+    .cards {
+        width: 84vw;
+    }
+}
+
+.self-intro-mp p {
+    margin-left: 30px;
+    color: white;
+}
+
+#me {
+    width: 150px;
+    border-radius: 75px;
+    padding: 20px;
+}
+
 article {
-    position: static;
-    /* top: 45vw; */
-    /* margin-left: 6vw; */
-    margin-top: 60px;
+    /* position: static; */
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 88vw;
+    /*aaaaaaaaaaaa*/
 }
 
 article h2 {
@@ -281,16 +318,16 @@ article h2 {
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 1600px;
     padding: 0 15px;
 }
 
 .cards {
     display: grid;
     grid-auto-columns: 20%;
-    width: 86vw;
+    /* width: 62vw; */
     height: fit-content;
-    grid-column-gap: 20px;
+    grid-column-gap: 90px;
     grid-auto-flow: column;
     padding: 25px 0px;
     list-style: none;
@@ -298,27 +335,63 @@ article h2 {
     scroll-snap-type: x mandatory;
 }
 
-@media (max-width: 1450px) {
+@media (min-width: 1449px) {
     .cards {
-        grid-column-gap: 65px;
+        width: 65vw;
     }
 }
 
-@media (max-width: 1190px) {
+@media (max-width: 1450px) {
+    .cards {
+        grid-column-gap: 60px;
+    }
+}
+
+@media (max-width: 1245px) {
+    .cards {
+        grid-column-gap: 80px;
+    }
+}
+
+@media (max-width: 1130px) {
     .cards {
         grid-column-gap: 100px;
     }
 }
 
-@media (max-width: 990px) {
+@media (max-width: 1015px) {
+    .cards {
+        grid-column-gap: 120px;
+    }
+}
+
+@media (max-width: 890px) {
     .cards {
         grid-column-gap: 140px;
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 770px) {
+    .cards {
+        grid-column-gap: 160px;
+    }
+}
+
+@media (max-width: 655px) {
     .cards {
         grid-column-gap: 180px;
+    }
+}
+
+@media (max-width: 525px) {
+    .cards {
+        grid-column-gap: 200px;
+    }
+}
+
+@media (max-width: 417px) {
+    .cards {
+        grid-column-gap: 220px;
     }
 }
 
@@ -432,7 +505,7 @@ div>label {
 }
 
 .word {
-    height: 3000px;
+    height: 1300px;
 }
 
 footer {
@@ -443,4 +516,32 @@ footer {
     width: 100vw;
     height: 100px;
     background-color: #1c1b1b;
+}
+
+table {
+    width: 40%;
+    overflow: hidden;
+}
+
+table,
+th,
+td {
+    /* border: 3px solid black; */
+    border-radius: 10px;
+}
+
+th,
+td {
+    background-color: transparent;
+    /* width: 29vw; */
+    line-height: 0px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+table img {
+    /* width: 29vw; */
+    width: 20vw;
+    border-radius: 10px;
+    /* border: 3px solid black; */
 }
