@@ -175,7 +175,7 @@ main {
 
 .home-pic {
     width: 87vw;
-    height: 695px;
+    height: 770px;
     position: static;
     margin-top: 20px;
     align-items: center;
@@ -240,7 +240,7 @@ hr {
 .hidden-noi-a {
     display: none;
     position: absolute;
-    top: 510px;
+    top: 400px;
     left: 43vw;
     transform: translate(-50%, -50%);
     color: white;
@@ -250,7 +250,7 @@ hr {
 .hidden-noi-b {
     display: none;
     position: absolute;
-    top: 540px;
+    top: 440px;
     left: 43vw;
     transform: translate(-50%, -50%);
     color: white;
@@ -274,7 +274,7 @@ hr {
     position: sticky;
     top: 100px;
     float: left;
-    margin: 50px 30px 0 0;
+    margin: 50px 30px 30px 0;
     background-color: rgb(17, 17, 17);
     width: 300px;
     height: 600px;
@@ -283,6 +283,7 @@ hr {
 
 @media (max-width:1450px) {
     .self-intro-mp {
+        position: static;
         float: initial;
         width: 88vw;
         height: 200px;
@@ -510,7 +511,7 @@ div>label {
 
 footer {
     position: absolute;
-    bottom: 0;
+    /* bottom: 0; */
     left: -7vw;
     right: 0;
     width: 100vw;
