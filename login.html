@@ -9,15 +9,15 @@
     </head>
     <body>
         <header>
-            <a href="#" style="font-size: 25px;"><strong>學&#8288;習&#8288;歷&#8288;程&#8288;網</strong></a>
+            <a href="index.html" style="font-size: 25px;"><strong>學&#8288;習&#8288;歷&#8288;程&#8288;網</strong></a>
             <ul class="nav-links">
-                <li><a href="index.html" class="active">首頁</a></li>
-                <li><a href="about.html">關於自己</a></li>
-                <li><a href="school_project.html">學習成果</a></li>
-                <li><a href="special_performences.html">作品成果</a></li>
-                <li><a href="certificate_display.html">獎狀展示</a></li>
-                <li><a href="extand_learning.html">增廣自修</a></li>
-                <li><a href="collage_program.html">大學課程</a></li>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="curriculum.html">課表安排</a></li>
+                <li><a href="schedule.html">行程安排</a></li>
+                <li><a href="docs.html">文件筆記</a></li>
+                <li><a href="clock.html">計時倒數</a></li>
+                <li><a href="map.html">附近地圖</a></li>
+                <li><a href="links.html">實用連結</a></li>
                 <li><a href="mailto:pi88031221@gmail.com">email me</a></li>
             </ul>
             <div class="nothing"></div>
@@ -40,7 +40,7 @@
         </header>
         <main>
             <div class="home-pic">
-                <img src="images/code.jpg" alt="code" id="code">
+                <img src="images/background.jpg" alt="code" id="code">
             </div>
             <div class="container2">
                 <div class="panel-heading text-center">
@@ -57,14 +57,19 @@
             <footer></footer>
         </main>
         <script>
+            const userList = ["pi88031221@gmail.com"];
+            const passList = ["Rr48332718"];
             const form = document.getElementById('login-form');
             form.addEventListener('submit', (event) => {
                 event.preventDefault();
                 const username = document.getElementById('username').value;
                 const password = document.getElementById('password').value;
-                if (username == 'user' && password == 'user'){
-                    localStorage.setItem("auth", 1);
-                    location.assign("index.html")
+                const userindex = userList.indexOf(username);
+                const passindex = passList.indexOf(password);
+                console.log(username, password);
+                if (userindex == passindex){
+                    localStorage.setItem("auth", userindex);
+                    location.assign("index.html");
                 }
             });
 
@@ -77,7 +82,6 @@
                     elements[i].onclick = function(){
                         hidden = false;
                         hidden_box.style.display = "block";
-                        console.log("hello world!");
                     }
                 }
 

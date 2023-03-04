@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+    <head>
+        <meta charset="UTF-8">
+        <title>Learning Helper</title>
+        <meta name="keywords" content="學習小幫手">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <a href="index.html" style="font-size: 25px;"><strong>學&#8288;習&#8288;小&#8288;幫&#8288;手</strong></a>
+            <ul class="nav-links">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="curriculum.html">課表安排</a></li>
+                <li><a href="schedule.html">行程安排</a></li>
+                <li><a href="docs.html">文件筆記</a></li>
+                <li><a href="clock.html">倒數計時</a></li>
+                <li><a href="#" class="active">附近地圖</a></li>
+                <li><a href="links.html">實用連結</a></li>
+                <li><a href="mailto:pi88031221@gmail.com">email me</a></li>
+            </ul>
+            <button class="logout">登&#8288;出</button>
+            <button class="storage-box"><img src="images/hamburger.png" alt="storage"></button>
+            <div class="hidden-box">
+                <div class="h-left">
+                    <ul class="hidden-links">
+                        <li><a href="index.html">首頁</a></li>
+                        <li><a href="curriculum.html">課表安排</a></li>
+                        <li><a href="schedule.html">行程安排</a></li>
+                        <li><a href="docs.html">文件筆記</a></li>
+                        <li><a href="clock.html">倒數計時</a></li>
+                        <li><a href="#">附近地圖</a></li>
+                        <li><a href="links.html">實用連結</a></li>
+                        <li><a href="mailto:pi88031221@gmail.com">email me</a></li>
+                    </ul>
+                    <button class="hidden-logout">登&#8288;出</button>
+                </div>
+                <button class="unhidden"><img src="images/x.png" alt="x"></button>
+            </div>
+        </header>
+        <main>
+            <div class="home-pic">
+                <img src="images/background.jpg" alt="code" id="code">
+                <div class="text-box"></div>
+                <h1 class="text-on-image">附&#8288;近&#8288;地&#8288;圖</h1>
+            </div>
+            <article>
+                
+            </article>
+            <div class="word">
+
+            </div>
+        </main>
+        <script>
+            class Auth {
+                constructor() {
+                    document.querySelector("body").style.display = "none";
+                    const auth = localStorage.getItem("auth");
+                    this.validateAuth(auth);
+                }
+
+                validateAuth(auth) {
+                    const userList = ["0", "1"]
+                    if (!userList.includes(auth)) {
+                        location.assign("login.html");
+                    } else {
+                        document.querySelector("body").style.display = "block";
+                    }
+                }
+            }
+            const auth = new Auth()
+
+            // const addlist = ['curriculum.html', '2.html'];
+            var elements = document.getElementsByTagName("button"); 
+            var hidden = true;
+            for(var i=0; i<elements.length; i++){
+                if (elements[i].className == 'logout' || elements[i].className == 'hidden-logout') { 
+                    elements[i].onclick = function(){ 
+                        localStorage.removeItem("auth");
+                        location.assign("login.html");
+                    }
+                }
+
+                const hidden_box = document.querySelector(".hidden-box")
+
+                if (elements[i].className == 'storage-box' & hidden==true) {
+                    elements[i].onclick = function(){
+                        hidden = false;
+                        hidden_box.style.display = "block";
+                    }
+                }
+
+                if (elements[i].className == 'unhidden' & hidden==true) {
+                    elements[i].onclick = function(){
+                        hidden = false;
+                        hidden_box.style.display = "none";
+                    }
+                }
+
+                // if (elements[i].className == 'diff') {
+                //     elements[i].onclick = function(){
+                //         console.log("hello");
+                //         location.assign(addlist[auth]);
+                //     }
+                // }
+            }
+        </script>
+    </body>
+</html>

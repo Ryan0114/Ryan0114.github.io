@@ -9,13 +9,13 @@
     </head>
     <body>
         <header>
-            <a href="#" style="font-size: 25px;"><strong>學&#8288;習&#8288;小&#8288;幫&#8288;手</strong></a>
+            <a href="index.html" style="font-size: 25px;"><strong>學&#8288;習&#8288;小&#8288;幫&#8288;手</strong></a>
             <ul class="nav-links">
-                <li><a href="#" class="active">首頁</a></li>
-                <li><a href="curriculum.html">課表安排</a></li>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="#" class="active">課表安排</a></li>
                 <li><a href="schedule.html">行程安排</a></li>
                 <li><a href="docs.html">文件筆記</a></li>
-                <li><a href="clock.html">計時倒數</a></li>
+                <li><a href="clock.html">倒數計時</a></li>
                 <li><a href="map.html">附近地圖</a></li>
                 <li><a href="links.html">實用連結</a></li>
                 <li><a href="mailto:pi88031221@gmail.com">email me</a></li>
@@ -25,11 +25,11 @@
             <div class="hidden-box">
                 <div class="h-left">
                     <ul class="hidden-links">
-                        <li><a href="#" class="active">首頁</a></li>
-                        <li><a href="curriculum.html">課表安排</a></li>
+                        <li><a href="index.html">首頁</a></li>
+                        <li><a href="#">課表安排</a></li>
                         <li><a href="schedule.html">行程安排</a></li>
                         <li><a href="docs.html">文件筆記</a></li>
-                        <li><a href="clock.html">計時倒數</a></li>
+                        <li><a href="clock.html">倒數計時</a></li>
                         <li><a href="map.html">附近地圖</a></li>
                         <li><a href="links.html">實用連結</a></li>
                         <li><a href="mailto:pi88031221@gmail.com">email me</a></li>
@@ -42,10 +42,107 @@
         <main>
             <div class="home-pic">
                 <img src="images/background.jpg" alt="code" id="code">
+                <div class="text-box"></div>
+                <h1 class="text-on-image">課&#8288;表&#8288;安&#8288;排</h1>
             </div>
             <article>
-                
-
+                <table>
+                    <caption>大一上課表</caption>
+                    <thead>
+                        <tr>
+                            <th class="left">節</th>
+                            <th class="left">time</th>
+                            <th>Mon.</th>
+                            <th>Tue.</th>
+                            <th>Wed.</th>
+                            <th>Thu.</th>
+                            <th>Fri.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="left">1</td>
+                            <th class="left">8:00~8:50</th>
+                            <td>微積分</td>
+                            <td>20</td>
+                            <td>30</td>
+                            <td>20</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td class="left">2</td>
+                            <th class="left">9:00~9:50</th>
+                            <td>100</td>
+                            <td>200</td>
+                            <td>300</td>
+                            <td>200</td>
+                            <td>300</td>
+                        </tr>
+                        <tr>
+                            <td class="left">3</td>
+                            <th class="left">10:00~10:50</th>
+                            <td>1000</td>
+                            <td>2000</td>
+                            <td>3000</td>
+                            <td>2000</td>
+                            <td>3000</td>
+                        </tr>
+                        <tr>
+                            <td class="left">4</td>
+                            <th class="left">11:00~11:50</th>
+                            <td>1000</td>
+                            <td>2000</td>
+                            <td>3000</td>
+                            <td>2000</td>
+                            <td>3000</td>
+                        </tr>
+                        <tr>
+                            <td class="left">5</td>
+                            <th class="left">13:00~13:50</th>
+                            <td>1000</td>
+                            <td>2000</td>
+                            <td>3000</td>
+                            <td>2000</td>
+                            <td>3000</td>
+                        </tr>
+                        <tr>
+                            <td class="left">6</td>
+                            <th class="left">14:00~14:50</th>
+                            <td>1000</td>
+                            <td>2000</td>
+                            <td>3000</td>
+                            <td>2000</td>
+                            <td>3000</td>
+                        </tr>
+                        <tr>
+                            <td class="left">7</td>
+                            <th class="left">15:00~15:50</th>
+                            <td>1000</td>
+                            <td>2000</td>
+                            <td>3000</td>
+                            <td>2000</td>
+                            <td>3000</td>
+                        </tr>
+                        <tr>
+                            <td class="left">8</td>
+                            <th class="left">16:00~16:50</th>
+                            <td>1000</td>
+                            <td>2000</td>
+                            <td>3000</td>
+                            <td>2000</td>
+                            <td>3000</td>
+                        </tr>
+                        <tr>
+                            <td class="left">9</td>
+                            <th class="left">17:00~17:50</th>
+                            <td>1000</td>
+                            <td>2000</td>
+                            <td>3000</td>
+                            <td>2000</td>
+                            <td>3000</td>
+                        </tr>
+                    </tbody>
+                </table>
             </article>
             <div class="word">
 
@@ -60,7 +157,8 @@
                 }
 
                 validateAuth(auth) {
-                    if (auth != 1) {
+                    const userList = ["0", "1"]
+                    if (!userList.includes(auth)) {
                         location.assign("login.html");
                     } else {
                         document.querySelector("body").style.display = "block";
@@ -69,6 +167,7 @@
             }
             const auth = new Auth()
 
+            // const addlist = ['curriculum.html', '2.html'];
             var elements = document.getElementsByTagName("button"); 
             var hidden = true;
             for(var i=0; i<elements.length; i++){
@@ -94,6 +193,13 @@
                         hidden_box.style.display = "none";
                     }
                 }
+
+                // if (elements[i].className == 'diff') {
+                //     elements[i].onclick = function(){
+                //         console.log("hello");
+                //         location.assign(addlist[auth]);
+                //     }
+                // }
             }
         </script>
     </body>
