@@ -586,3 +586,15 @@ table img {
     border-radius: 10px;
     /* border: 3px solid black; */
 }
+
+.mapbox {
+    margin-top: 30px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+iframe {
+    width: 80vw;
+}
