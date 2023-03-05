@@ -587,7 +587,8 @@ table img {
     /* border: 3px solid black; */
 }
 
-.mapbox {
+.mapbox,
+.schebox {
     margin-top: 30px;
     align-items: center;
     display: flex;
@@ -597,4 +598,6 @@ table img {
 
 iframe {
     width: 80vw;
+    height: 85vh;
+    margin-bottom: 20px;
 }
