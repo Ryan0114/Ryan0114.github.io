@@ -598,6 +598,12 @@ table img {
 
 iframe {
     width: 80vw;
-    height: 85vh;
+    /* height: 85vh; */
     margin-bottom: 20px;
+}
+
+@media (max-width: 1000px) {
+    iframe {
+        width: 100vw;
+    }
 }
