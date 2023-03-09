@@ -607,3 +607,13 @@ iframe {
         width: 100vw;
     }
 }
+
+.links-box a {
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+}
+
+.links-box a:hover {
+    color: cornflowerblue;
+}
