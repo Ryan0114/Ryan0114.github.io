@@ -2,22 +2,22 @@
 <html lang="zh-Hant-TW">
     <head>
         <meta charset="UTF-8">
-        <title>Learning Helper</title>
-        <meta name="keywords" content="學習小幫手">
+        <title>我的學習歷程網站</title>
+        <meta name="keywords" content="學習歷程, 多元表現">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header>
-            <a href="index.html" style="font-size: 25px;"><strong>學&#8288;習&#8288;小&#8288;幫&#8288;手</strong></a>
+            <a href="index.html" style="font-size: 25px;"><strong>學&#8288;習&#8288;歷&#8288;程&#8288;網</strong></a>
             <ul class="nav-links">
                 <li><a href="index.html">首頁</a></li>
-                <li><a href="curriculum.html">課表安排</a></li>
-                <li><a href="schedule.html">行程安排</a></li>
-                <li><a href="docs.html">文件筆記</a></li>
-                <li><a href="#" class="active">倒數計時</a></li>
-                <li><a href="map.html">附近地圖</a></li>
-                <li><a href="links.html">實用連結</a></li>
+                <li><a href="#" class="active">關於自己</a></li>
+                <li><a href="school_project.html">學習成果</a></li>
+                <li><a href="special_performences.html">作品成果</a></li>
+                <li><a href="certificate_display.html">獎狀展示</a></li>
+                <li><a href="extand_learning.html">增廣自修</a></li>
+                <li><a href="collage_program.html">大學課程</a></li>
                 <li><a href="mailto:pi88031221@gmail.com">email me</a></li>
             </ul>
             <button class="logout">登&#8288;出</button>
@@ -26,12 +26,12 @@
                 <div class="h-left">
                     <ul class="hidden-links">
                         <li><a href="index.html">首頁</a></li>
-                        <li><a href="#">課表安排</a></li>
-                        <li><a href="schedule.html">行程安排</a></li>
-                        <li><a href="docs.html">文件筆記</a></li>
-                        <li><a href="clock.html">倒數計時</a></li>
-                        <li><a href="map.html">附近地圖</a></li>
-                        <li><a href="links.html">實用連結</a></li>
+                        <li><a href="about.html">關於自己</a></li>
+                        <li><a href="school_project.html">學習成果</a></li>
+                        <li><a href="special_performences.html">作品成果</a></li>
+                        <li><a href="certificate_display.html">獎狀展示</a></li>
+                        <li><a href="extand_learning.html">增廣自修</a></li>
+                        <li><a href="collage_program.html">大學課程</a></li>
                         <li><a href="mailto:pi88031221@gmail.com">email me</a></li>
                     </ul>
                     <button class="hidden-logout">登&#8288;出</button>
@@ -40,17 +40,7 @@
             </div>
         </header>
         <main>
-            <div class="home-pic">
-                <img src="images/background.jpg" alt="code" id="code">
-                <div class="text-box"></div>
-                <h1 class="text-on-image">倒&#8288;數&#8288;計&#8288;時</h1>
-            </div>
-            <article>
-                
-            </article>
-            <div class="word">
-
-            </div>
+            
         </main>
         <script>
             class Auth {
@@ -61,26 +51,24 @@
                 }
 
                 validateAuth(auth) {
-                    const userList = ["0", "1"]
-                    if (!userList.includes(auth)) {
+                    if (auth != 1) {
                         location.assign("login.html");
                     } else {
                         document.querySelector("body").style.display = "block";
                     }
                 }
             }
-            const auth = new Auth()
+            const auth = new Auth();
 
-            // const addlist = ['curriculum.html', '2.html'];
             var elements = document.getElementsByTagName("button"); 
-            var hidden = true;
+            var hidden = true; 
             for(var i=0; i<elements.length; i++){
-                if (elements[i].className == 'logout' || elements[i].className == 'hidden-logout') { 
+                if (elements[i].className == 'logout') { 
                     elements[i].onclick = function(){ 
                         localStorage.removeItem("auth");
                         location.assign("login.html");
                     }
-                }
+                } 
 
                 const hidden_box = document.querySelector(".hidden-box")
 
@@ -97,13 +85,6 @@
                         hidden_box.style.display = "none";
                     }
                 }
-
-                // if (elements[i].className == 'diff') {
-                //     elements[i].onclick = function(){
-                //         console.log("hello");
-                //         location.assign(addlist[auth]);
-                //     }
-                // }
             }
         </script>
     </body>

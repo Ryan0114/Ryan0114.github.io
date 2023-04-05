@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
     <head>
-        <title>Login Page</title>
         <meta charset="UTF-8">
+        <title>我的學習歷程網站</title>
         <meta name="keywords" content="學習歷程, 多元表現">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header>
-            <a href="#" style="font-size: 25px;"><strong>學&#8288;習&#8288;歷&#8288;程&#8288;網</strong></a>
+            <a href="index.html" style="font-size: 25px;"><strong>學&#8288;習&#8288;歷&#8288;程&#8288;網</strong></a>
             <ul class="nav-links">
-                <li><a href="index.html" class="active">首頁</a></li>
+                <li><a href="index.html">首頁</a></li>
                 <li><a href="about.html">關於自己</a></li>
-                <li><a href="school_project.html">學習成果</a></li>
+                <li><a href="index.html" class="active">學習成果</a></li>
                 <li><a href="special_performences.html">作品成果</a></li>
                 <li><a href="certificate_display.html">獎狀展示</a></li>
                 <li><a href="extand_learning.html">增廣自修</a></li>
                 <li><a href="collage_program.html">大學課程</a></li>
                 <li><a href="mailto:pi88031221@gmail.com">email me</a></li>
             </ul>
-            <div class="nothing"></div>
+            <button class="logout">登&#8288;出</button>
             <button class="storage-box"><img src="images/hamburger.png" alt="storage"></button>
             <div class="hidden-box">
                 <div class="h-left">
@@ -34,50 +34,48 @@
                         <li><a href="collage_program.html">大學課程</a></li>
                         <li><a href="mailto:pi88031221@gmail.com">email me</a></li>
                     </ul>
+                    <button class="hidden-logout">登&#8288;出</button>
                 </div>
                 <button class="unhidden"><img src="images/x.png" alt="x"></button>
             </div>
         </header>
         <main>
-            <div class="home-pic">
-                <img src="images/code.jpg" alt="code" id="code">
-            </div>
-            <div class="container2">
-                <div class="panel-heading text-center">
-                    <p class="form-title">登入<p>
-                </div>
-                <form id="login-form" action="index.html">
-                    <label for="username">Username:</label><br>
-                    <input type="text" id="username" autocomplete="off"><br>
-                    <label for="password">Password:</label><br>
-                    <input type="password" id="password"><br><br>
-                    <input type="submit" value="Login", class="form-bottom">
-                </form>
-            </div>
-            <footer></footer>
+            
         </main>
         <script>
-            const form = document.getElementById('login-form');
-            form.addEventListener('submit', (event) => {
-                event.preventDefault();
-                const username = document.getElementById('username').value;
-                const password = document.getElementById('password').value;
-                if (username == 'user' && password == 'user'){
-                    localStorage.setItem("auth", 1);
-                    location.assign("index.html")
+            class Auth {
+                constructor() {
+                    document.querySelector("body").style.display = "none";
+                    const auth = localStorage.getItem("auth");
+                    this.validateAuth(auth);
                 }
-            });
+
+                validateAuth(auth) {
+                    if (auth != 1) {
+                        location.assign("login.html");
+                    } else {
+                        document.querySelector("body").style.display = "block";
+                    }
+                }
+            }
+            const auth = new Auth();
 
             var elements = document.getElementsByTagName("button"); 
             var hidden = true;
             for(var i=0; i<elements.length; i++){
+                if (elements[i].className == 'logout') { 
+                    elements[i].onclick = function(){ 
+                        localStorage.removeItem("auth");
+                        location.assign("login.html");
+                    }
+                }  
+
                 const hidden_box = document.querySelector(".hidden-box")
 
                 if (elements[i].className == 'storage-box' & hidden==true) {
                     elements[i].onclick = function(){
                         hidden = false;
                         hidden_box.style.display = "block";
-                        console.log("hello world!");
                     }
                 }
 
@@ -87,7 +85,6 @@
                         hidden_box.style.display = "none";
                     }
                 }
-
             }
         </script>
     </body>
